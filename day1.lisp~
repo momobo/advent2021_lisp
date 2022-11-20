@@ -1,6 +1,0 @@
-
-(in-package #:advent2021)
-
-(defun read-sonar-sweep ()
-  (uiop:read-file-lines  (asdf:system-relative-pathname 'advent2021 "inputs/day1/day1"))) 
-   
