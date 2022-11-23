@@ -29,7 +29,7 @@
 		when (string-equal (car ping) "down")    :sum (parse-integer (car (cdr ping))) into aim
 		 ; debug do  (print (list aim x y))
 	  :finally (return (list x y))))))
--- olè
+;; olè
 
 
    
