@@ -1,0 +1,22 @@
+(in-package #:advent2021)
+
+
+
+(defun string-to-bit-vector (mystr)
+(make-array 5
+	    :element-type 'bit
+	    :initial-contents (mapcar #'digit-char-p (coerce mystr 'list))))
+
+
+
+(defun bit-vector-to-number (bit-vector)
+  (reduce (lambda (acc bit)
+	    (+ (ash acc 1) bit))
+	  bit-vector))
+
+
+(defun day3/solution1 ()
+  (let ((gamma-rate #*10110)
+	(epsilon-rate #*01001))
+    (* (bit-vector-to-number gamma-rate)
+       (bit-vector-to-number epsilon-rate))))
